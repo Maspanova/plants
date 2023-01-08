@@ -1,0 +1,528 @@
+* {margin:0;padding:0;}
+
+html {
+    box-sizing: border-box; /*изменен алгоритм расчета размера блоко*/
+    scroll-behavior: smooth; /*плавная прокрутка*/
+}
+
+*,
+*::before,
+*::after 
+{
+    box-sizing: inherit; /*наследуется алгоритм расчета блока*/
+}
+
+body {
+    background: #EDF2EC; /*цвет фона*/
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 20px;
+    Line-height: 35px;
+    font-weight: 400;
+    color:  #636060;
+    
+
+}
+.wrapper {
+    max-width: 1222px; /*ширина контейнера для текста*/
+    margin: 0 auto; /*выравнивание по центру*/
+   
+}
+/*header style start */
+header {
+    height: 134px;
+    padding: 42px 0;
+    background: #EDF2EC; /*цвет фона*/
+    position: absolut; /*не fixed не зафиксировали меню вверху, согласно инструкции*/
+    top: 0;
+    left:0;
+    /* убрала 100% ширины экрана*/
+  
+}
+
+
+.header_logo{
+    margin-right: 688.83px;
+}
+.header_wrapper {
+    width: 1220px;
+    display: flex;
+    flex-wrap: wrap; /*перенос контента*/
+    align-items: center; /*выравнивание по низу*/
+    justify-content: space-between;
+   }
+.header_list {
+display: flex;
+flex-wrap: wrap; /*перенос контента*/
+width: 452px;
+
+}
+.header_item {
+    margin-right: 46.11px;
+    list-style:none; /*без маркировки*/
+    display: inline; /* в строчку*/
+
+}
+.header_item:last-child { /*обнуляем крайний правый маржин у последнеего элемента*/
+    margin-right: 0;
+}
+.header_link {
+    text-decoration: none;
+    font-family: "Inika";
+    font-weight: 400;
+    font-size: 16px;
+    Line-height: 50px;
+    color: #010201;
+}
+
+.header_link:hover,
+.header_link:focus, 
+.header_link:active {
+    opacity: 0.75;
+}
+
+.font_red {
+    color: #E06733;
+    font-weight: 400;
+    }
+
+    /*header style end */
+h2{
+    font-family: 'Inika';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 52px;
+}
+/*section welcome style start */
+.welcome {
+   /* margin: 62px 0px;*/
+   display: contents;
+   height: 532px;
+
+}
+.welcome_all { 
+    display: grid; /*генерирую грид контейнер уровня блок */
+   grid-template-columns: repeat(2, 1fr); /*разделяю на 2 столбца*/
+    grid-gap: 0 224px;  
+
+    max-width: 1222px;
+
+
+}
+
+.welcome_img >img {
+    width: 448.8;
+    margin-top: 62px;
+    
+
+}
+.welcome_text {
+    width: 549px;
+    margin-top: 98px;
+
+}
+h1 {
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 45px;
+    Line-height: 50px;
+    font-weight: 700;
+    width: 549px;
+    color: #717171;
+    margin-bottom: 42px;
+ 
+}
+
+
+.color_green{
+color: #499A18;
+}
+.welcome_p {
+    max-width: 525.44px;
+    margin-bottom: 48px;
+}
+.welcome_button{
+    width: 158px; 
+    height: 44px;
+    border-radius: 10px;
+    border: 2px solid #E06733;
+}
+
+.welcome_button:hover,
+.service_button:hover {
+    background: #E06733;
+    color: #FFFFFF;
+}
+/*section welcome style end */
+
+
+/*section about  style start */
+.about {
+    background: #FFFFFF;
+    min-height: 666px;
+ 
+}
+
+.about_all{
+    margin top: 93px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap; /*перенос контента*/
+    align-items: center;
+}
+.about_text{
+    max-width: 605px;
+    min-height: 350px;
+    margin-top: 161px;
+    margin-bottom: 155px ;
+    margin-right: 153px;
+}
+
+.about_text> h2 {
+    max-width: 463px;
+    max-height: 102px;
+    font-family: "Inica";
+    font-style: normal;
+    font-size: 40px;
+    Line-height: 52px;
+    font-weight: 400;
+    margin-bottom: 40px ;
+}
+img src="./images/houseplant 1.svg"{
+    justify-content: flex-end; /*не сработал*/
+
+    max-width: 464px;
+ 
+}
+/*section about style end*/
+
+/*section_service style start */
+
+
+.service_text {
+max-width: 1009px;   
+min-height: 94px; 
+margin: 0px 205px 83px 0px;
+display: flex;
+flex-wrap: wrap; /*перенос контента*/
+align-items: center;
+}
+.service_text > h2.color_green {
+    max-width: 306px;
+    margin-right: 142px;
+    
+}
+.service_form {
+    display: inline;
+    max-width: 560px;
+     justify-content: space-between;
+   }
+.service_button{
+    width: 161px; 
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #E06733;
+    margin-right: 31px;
+    
+    
+}
+
+.service_button:last-child { /*обнуляем крайний правый маржин у последнеего элемента*/
+    margin-right: 0;
+}
+.service_button: hover,
+.service_button: focus,
+.service_button: active 
+{
+    background-color: #E06733;
+}
+.place_cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 55px 116px;
+    margin-bottom: 121px;
+   
+}
+
+figure > img{
+    border-radius: 20px 20px 0px 0px;
+}
+figure{
+    border: 1px solid #E3E1D5;
+    border-radius: 20px 20px 20px 20px;
+
+}
+.figcaption {
+    font-weight: 400;
+    font-size: 16px;
+    Line-height: 20px;
+    text-align: center;
+    padding-top: 5px;
+    margin-bottom: 36px;
+  
+}
+p.font_red {
+    font-weight: 700;
+    font-size: 20px;
+    Line-height: 20px;
+    text-align: center;
+       margin-bottom: 10px;
+  
+}
+
+/*section service style end */
+/*section prices style start */
+.prices {
+    background: #FFFFFF;
+    height: 560px;
+ 
+}
+.prices_all {
+  margin-top: 40px;
+  width: 332px;
+  height: 391px;
+  display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-gap: 438px;
+
+   
+
+}
+.prices_radio > h2 {
+    font-family: Inter;
+font-size: 40px;
+font-weight: 700;
+line-height: 48px;
+text-align: left;
+color: #000000;
+margin-bottom: 60px;
+margin-top: 40px;
+}
+.prices_contact_all {
+    text-align: right;
+    
+   
+ 
+   
+}
+
+.prices_contact {
+    width: 452px;
+    height: 191px;
+   font-family: Inter;
+font-size: 40px;
+font-weight: 700;
+line-height: 50px;
+letter-spacing: 0em;
+margin-top: 40px;
+
+
+}
+.prices_contact>p {
+   margin-bottom: 40px;
+}
+
+.prices_acor {
+    width: 322px;
+    height: 282px;
+    border: 1px solid #E3E1D5;
+    border-radius: 20px;
+   display: inline-flex;
+flex-direction: column;
+ align-items: center;
+justify-content: center;
+
+}
+
+
+
+
+.prices_acor label {
+    cursor: pointer;
+    background-color: #EDF2EC;
+    display: block;
+    width: 250px;
+    height: 50px;
+    border-radius: 20px;
+    margin-bottom: 32px;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+   padding: 16px 110px 16px 40px;
+ 
+    color: #000000;
+    position: relative;
+
+    
+    
+}
+.prices_acor label:hover {
+    background: #D6E7D2;
+}
+
+
+
+.prices_acor input{
+    display: none;
+}
+.prices_acor label:before {
+    content: url("../images/accordion_btn_pr.svg");
+    float: right;
+    position: absolute;
+  left: 80%;
+  
+
+}
+
+.prices_img{
+    margin: 40px auto auto auto;
+}
+.prices_button {
+    width: 161px; 
+    height: 50px;
+    border-radius: 5px;
+    border: 1px solid #E06733;
+    margin-right: 28px;
+    background: #ffffff;
+}
+.prices_button:hover{
+background: #E06733;
+color: #FFFFFF;}
+.contacts_img {
+    margin-top: 53px;
+}
+.wrapper_contacts{
+    display: flex;
+    justify-content: space-between;
+    height: 550px;
+}
+.contacts_h {
+
+font-size: 40px;
+font-weight: 700;
+line-height: 52px;
+text-align: center;
+margin-top: 60px;
+color: #499A18;
+
+}
+.contacts_form {
+    margin-top: 148px;
+}
+
+select {
+    background: #D6E7D2;
+    width: 450px;
+    height: 50px;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    padding-left: 20px;
+    border: none; /*убрать  рамку*/
+    
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); /*тень*/
+    border-radius: 0px;
+
+appearance: none; /*убираем стрелку*/
+overflow: hidden;
+background-image: url("../images/accordion_btn.svg"); /*замена значка*/
+background-repeat: no-repeat;
+background-position: 391px 50%;
+
+}
+select:active,
+select:checked,
+select:hover,
+option:checked, 
+select:checked,
+option:hover
+
+
+{
+background: #C1E698;
+border: none; /*убрать  рамку* не убралась*/
+appearance: none; /*убираем стрелку*/
+overflow: hidden;
+background-image: url("../images/drop_btn_ac.svg"); /*замена значка*/
+background-repeat: no-repeat;
+background-position: 391px 50%;
+padding-left: 41px;
+}
+
+
+
+
+
+option {
+    width: 450px;
+    height: 284px;
+    background: #DCE9D9;
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 40px;
+/* or 250% */
+letter-spacing: 0.05em;
+color: #499A18;
+outline: 1px #D9D9D9;
+outline-width: 1px;
+}
+.city: opened {
+    background: #C1E698;
+}
+
+footer {
+   background: #FFFFFF;  
+}
+
+.footer{
+    height: 130px;
+    
+      height: 130px;
+padding-top: 40px;
+}
+.footer_all {
+       list-style:none; /*без маркировки*/
+align-items: center;
+
+ }   
+ .footer_all {
+    display: flex;
+ align-self: center;
+
+ }
+
+
+.footer_2 {
+    margin-left: 20px;
+}
+.footer_3 {
+    margin-left: 30px;
+    
+}
+.footer_4 {
+    margin-left: 347px;
+    
+}
+.footer_5 {
+    margin-left: 320px;
+}
+.footer_6 {
+    margin-left: 30px;
+}
+.footer_7 {
+    margin-left: 30px;
+}
+.footer_8 {
+    margin-left: 25px;
+}
+.footer_3>a,
+.footer_4>a, 
+.footer_5>a {
+    color:#000000; text-decoration:none;}
